@@ -101,3 +101,45 @@ USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
 uid=33(www-data) gid=33(www-data) groups=33(www-data)
 /bin/sh: 0: can't access tty; job control turned off
 ```
+# Post-Exploitation
+## Finding the First Flag
+Let's start poking around and look for a user.txt file.
+```console
+$ pwd
+/
+$ ls
+bin
+boot
+cdrom
+dev
+etc
+home
+lib
+lib32
+lib64
+libx32
+lost+found
+media
+mnt
+opt
+proc
+root
+run
+sbin
+snap
+srv
+swap.img
+sys
+tmp
+usr
+var
+$ cd home
+$ ls
+webdeveloper
+$ cd webdeveloper
+$ ls
+user.txt
+$ cat user.txt
+********************************
+```
+And there it is, censored of course!
