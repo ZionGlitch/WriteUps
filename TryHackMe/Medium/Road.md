@@ -41,8 +41,8 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 9.09 seconds
 ```
 Opening Metasploit and searching for any exploits did not result in any findings.
-Next, went to the webpage of the IP, nothing of interest was found on any oof the pages, and neither in the Source Code.
+Next, went to the webpage of the IP, nothing of interest was found on any of the pages, and neither in the Source Code.
 Clicking on "Merchant Central" allows us to create a login.
 Basic SQL Injection did not work here.
 We created an account and logged in.
-Majority of the  pages here did not work, but an Profile/Edit Profile page revealed an admin email off ```admin@sky.thm```
+Majority of the  pages here did not work, but an Profile/Edit Profile page revealed an admin email of ```admin@sky.thm```
