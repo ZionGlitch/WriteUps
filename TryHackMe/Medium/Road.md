@@ -143,3 +143,4 @@ $ cat user.txt
 ********************************
 ```
 And there it is, censored of course!
+# Privilege Escalation
