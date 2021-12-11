@@ -46,3 +46,31 @@ Clicking on "Merchant Central" allows us to create a login.
 Basic SQL Injection did not work here.
 We created an account and logged in.
 Majority of the  pages here did not work, but an Profile/Edit Profile page revealed an admin email of ```admin@sky.thm```
+
+Using this email as the username, and running basic SQL Injection on the password did not work.
+We logged back in as the user we created and noticed a reset user field, this allows us to reset the password for our account, without requiring the previous password. However, the username field is grayed out and did not allow us to change it.
+
+We launched burp suite and used Proxy/Intercept to intercept the POST message of when we type in the new password. Sure enough, Burp Suite intercepted the POST message, and we were able to change the username field to ```admin@sky.thm``` and the password to ```password```
+
+We logged out of our account and sure enough were able to login as the admin. Now it was time to go back to the terminal and see if we can SSH with these new credentials.
+
+Sadly, it did not work.
+```console
+┌─[zionglitch@parrot]─[~]
+└──╼ $ssh admin@sky.thm@10.10.105.174
+The authenticity of host '10.10.105.174 (10.10.105.174)' can't be established.
+ECDSA key fingerprint is SHA256:zSoCEcBBY73hNL9ItPA4CnB/405/W6GQYsl94qRMkOo.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '10.10.105.174' (ECDSA) to the list of known hosts.
+admin@sky.thm@10.10.105.174's password: 
+Permission denied, please try again.
+admin@sky.thm@10.10.105.174's password: 
+Permission denied, please try again.
+admin@sky.thm@10.10.105.174's password: 
+
+┌─[✗]─[zionglitch@parrot]─[~]
+└──╼ $ssh admin@10.10.105.174
+admin@10.10.105.174's password: 
+Permission denied, please try again.
+admin@10.10.105.174's password: 
+```
