@@ -4,7 +4,7 @@ Ran "Nmap -ST *IP* -p- -T4" to find all possible open ports.
 Discovered that Port 22 and Port 80 were open.
 Ran "Nmap -sV *IP* -p 22 -T4" and found Port 22 uses OpenSSH 8.2p1 Ubuntu 4ubuntu0.2
 Ran "Nmap -sV *IP* -p 80 -T4" and found Port 80 runs Apache httpd 2.4.41 (Ubuntu)
-```console
+```
 ┌─[zionglitch@parrot]─[~]
 └──╼ $nmap -sT 10.10.116.209 -p- -T4
 Starting Nmap 7.92 ( https://nmap.org ) at 2021-12-11 01:51 GMT
