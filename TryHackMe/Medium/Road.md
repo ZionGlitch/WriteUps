@@ -1,9 +1,9 @@
+# Introduction
+Road by StillNoob - https://tryhackme.com/room/road
 # Enumeration
 ## Nmap
-Ran "Nmap -ST *IP* -p- -T4" to find all possible open ports.
+Ran Nmap with the "-p-" flag to find all possible open ports.
 Discovered that Port 22 and Port 80 were open.
-Ran "Nmap -sV *IP* -p 22 -T4" and found Port 22 uses OpenSSH 8.2p1 Ubuntu 4ubuntu0.2
-Ran "Nmap -sV *IP* -p 80 -T4" and found Port 80 runs Apache httpd 2.4.41 (Ubuntu)
 ```console
 ┌─[zionglitch@parrot]─[~]
 └──╼ $nmap -sT 10.10.116.209 -p- -T4
@@ -233,7 +233,7 @@ user
 dbdb.user.find();
 { "_id" : ObjectId("60ae2661203d21857b184a76"), "Month" : "Feb", "Profit" : "25000" }
 { "_id" : ObjectId("60ae2677203d21857b184a77"), "Month" : "March", "Profit" : "5000" }
-{ "_id" : ObjectId("60ae2690203d21857b184a78"), "Name" : "webdeveloper", "Pass" : "BahamasChapp123!@#" }
+{ "_id" : ObjectId("60ae2690203d21857b184a78"), "Name" : "webdeveloper", "Pass" : "CENSORED_PASSWORD" }
 { "_id" : ObjectId("60ae26bf203d21857b184a79"), "Name" : "Rohit", "EndDate" : "December" }
 { "_id" : ObjectId("60ae26d2203d21857b184a7a"), "Name" : "Rohit", "Salary" : "30000" }
 ```
@@ -245,7 +245,7 @@ bye
 Error saving history file: FileOpenFailed Unable to open() file /var/www/.dbshell: Permission denied
 www-data@sky:/$ su webdeveloper	
 su webdeveloper
-Password: BahamasChapp123!@#
+Password: CENSORED_PASSWORD
 
 webdeveloper@sky:/$ ls
 ls
