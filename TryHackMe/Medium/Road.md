@@ -237,3 +237,33 @@ dbdb.user.find();
 { "_id" : ObjectId("60ae26bf203d21857b184a79"), "Name" : "Rohit", "EndDate" : "December" }
 { "_id" : ObjectId("60ae26d2203d21857b184a7a"), "Name" : "Rohit", "Salary" : "30000" }
 ```
+Oh wow, a password! Let's switch to this user and see what we can do.
+```console
+> exit
+exexit
+bye
+Error saving history file: FileOpenFailed Unable to open() file /var/www/.dbshell: Permission denied
+www-data@sky:/$ su webdeveloper	
+su webdeveloper
+Password: BahamasChapp123!@#
+
+webdeveloper@sky:/$ ls
+ls
+bin    dev   lib    libx32      mnt   root  snap      sys  var
+boot   etc   lib32  lost+found  opt   run   srv       tmp
+cdrom  home  lib64  media       proc  sbin  swap.img  usr
+webdeveloper@sky:/$ cd root
+cd root
+bash: cd: root: Permission denied
+webdeveloper@sky:/$ sudo -l
+sudo -l
+Matching Defaults entries for webdeveloper on sky:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin,
+    env_keep+=LD_PRELOAD
+
+User webdeveloper may run the following commands on sky:
+    (ALL : ALL) NOPASSWD: /usr/bin/sky_backup_utility
+webdeveloper@sky:/$ 
+```
+Hmm, I am not sure what all of this means so it's time to do a little research on what all these commands are.
