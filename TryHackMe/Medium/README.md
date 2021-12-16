@@ -1,2 +1,2 @@
 # Easy
-A list of writeups for Easy TryHackMe CTF rooms
+A List of wirteups for medium CTF rooms on TryHackMe
