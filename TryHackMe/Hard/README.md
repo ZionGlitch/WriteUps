@@ -1,2 +1,2 @@
 # Hard
-A List of Hard CTF TryHackMeRooms
+A List of wirteups for hard CTF rooms on TryHackMe
