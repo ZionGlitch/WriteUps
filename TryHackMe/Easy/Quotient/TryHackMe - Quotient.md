@@ -8,7 +8,7 @@ Pinging the IP address for this machine does not seem to resolve anything. I had
 ![3cc90c64c1d1ac43d1aef70c73009f4e.png](../_resources/3cc90c64c1d1ac43d1aef70c73009f4e.png)
 
 <p>
-  <src="../3cc90c64c1d1ac43d1aef70c73009f4e.png">
+  <src="/Quotient/_resources/3cc90c64c1d1ac43d1aef70c73009f4e.png">
 </p>
   
 * * *
