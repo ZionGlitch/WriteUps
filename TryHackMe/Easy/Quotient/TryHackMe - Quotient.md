@@ -27,17 +27,23 @@ It looks like we're not very special and only have general access.
 
 Let's have a look around and see what is on this computer. So far the only thing that really stands out is the folder **windows nt**. Normally the **W** would be capitalized, same with **NT**. Not sure why this was deliberately changed, but we will keep it in mind if anything else comes up.
 
-![a0b61d9dd05b25eb245f52e170b292a1.png](../_resources/a0b61d9dd05b25eb245f52e170b292a1.png)
+<p>
+  <img height="auto" src="./_resources/a0b61d9dd05b25eb245f52e170b292a1.png">
+</p>
 
 Nothing else stands out withing the folders, maybe we can see what services are running on the machine.
 
 Everything looks normal except for one. It has no description and is misspelled.
 
-![95562cfa26ee77ee2229ff38837c2efb.png](../_resources/95562cfa26ee77ee2229ff38837c2efb.png)
+<p>
+  <img height="auto" src="./_resources/95562cfa26ee77ee2229ff38837c2efb.png">
+</p>
 
 Let's investigate.
 
-![0ada677f68c1d969a7520527e7a983c4.png](../_resources/0ada677f68c1d969a7520527e7a983c4.png)
+<p>
+  <img height="auto" src="./_resources/0ada677f68c1d969a7520527e7a983c4.png">
+</p>
 
 At this point, I was a bit stuck and not sure how to proceed. Clearly there is something about this service that is meant to be exploited. 
 
@@ -53,21 +59,29 @@ So we are dealing with an **Unquoted Service Path**, now the name of the room ma
 
 According to the article above, we should create a payload and drop it into that file path. So let's create that payload.
 
-![69003b3b6fa29e0ca5cd9b402cc1815c.png](../_resources/69003b3b6fa29e0ca5cd9b402cc1815c.png)
+<p>
+  <img height="auto" src="./_resources/69003b3b6fa29e0ca5cd9b402cc1815c.png">
+</p>
 
 Now we need to start a web server on our Kali machine.
 
-![7eed70e4cd3a5000fb4542483de44f67.png](../_resources/7eed70e4cd3a5000fb4542483de44f67.png)
+<p>
+  <img height="auto" src="./_resources/7eed70e4cd3a5000fb4542483de44f67.png">
+</p>
 
 And we need to download the executable from our target machine.
 
-![e2c62b94d766594d957550f4eabbe889.png](../_resources/e2c62b94d766594d957550f4eabbe889.png)
+<p>
+  <img height="auto" src="./_resources/e2c62b94d766594d957550f4eabbe889.png">
+</p>
 
 Now, we need to have the machine run that service, but we lack the permissions to start/stop them, so a reboot will be required.
 
 But first, gotta make sure NetCat is listening.
 
-![e57fff9a846ab29bc1461d3146275646.png](../_resources/e57fff9a846ab29bc1461d3146275646.png)
+<p>
+  <img height="auto" src="./_resources/e57fff9a846ab29bc1461d3146275646.png">
+</p>
 
 Now, the wait begins...
 ...
@@ -81,7 +95,9 @@ Well, as it turns out, it's the name of the .exe. I did not read the article car
 
 Let's start over real quick.
 
-![d65e82940e2f358055650fc96fb76da2.png](../_resources/d65e82940e2f358055650fc96fb76da2.png)
+<p>
+  <img height="auto" src="./_resources/d65e82940e2f358055650fc96fb76da2.png">
+</p>
 
 That's better.
 Now we'll download this on the target machine.
@@ -95,7 +111,9 @@ Now we once again wait on NetCat.
 
 Got it...
 
-![f314cea54ab81f3928c495244f3b2faa.png](../_resources/f314cea54ab81f3928c495244f3b2faa.png)
+<p>
+  <img height="auto" src="./_resources/f314cea54ab81f3928c495244f3b2faa.png">
+</p>
 * * *
 ### Post-Exploitation
 
@@ -103,7 +121,9 @@ Time to search for that flag.txt file.
 
 And it looks like it's right on the Admin Desktop.
 
-![b9983bdb900bafc38d417afd67737caa.png](../_resources/b9983bdb900bafc38d417afd67737caa.png)
+<p>
+  <img height="auto" src="./_resources/b9983bdb900bafc38d417afd67737caa.png">
+</p>
 * * *
 ### Lessons Learned
 
