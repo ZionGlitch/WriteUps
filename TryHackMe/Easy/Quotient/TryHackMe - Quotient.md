@@ -5,10 +5,8 @@ Created by: ben, JohnHammond, cmnatic, NightWolf, timtaylor
 ### Connecting
 Pinging the IP address for this machine does not seem to resolve anything. I had to briefly look at another write-up to see if anyone else had issues. It seems RDP still works so I proceeded to simply connect to it and it worked.
 
-![3cc90c64c1d1ac43d1aef70c73009f4e.png](../_resources/3cc90c64c1d1ac43d1aef70c73009f4e.png)
-
 <p>
-  <img height="auto" src="./_resources/3cc90c64c1d1ac43d1aef70c73009f4e.png" title="RDP Connect">
+  <img height="auto" src="./_resources/3cc90c64c1d1ac43d1aef70c73009f4e.png">
 </p>
   
 * * *
@@ -17,11 +15,15 @@ Right away we can tell that this server is an AWS Instance being hosted in **eu-
 
 Let's see what kind of permissions we have as the user "Sage".
 
-![658494285c75fb47f7e816ce2fc218a1.png](../_resources/658494285c75fb47f7e816ce2fc218a1.png)
+<p>
+  <img height="auto" src="./_resources/658494285c75fb47f7e816ce2fc218a1.png">
+</p>
 
 It looks like we're not very special and only have general access.
 
-![3dadeb6debd6380cdab64b97820bbbaa.png](../_resources/3dadeb6debd6380cdab64b97820bbbaa.png)
+<p>
+  <img height="auto" src="./_resources/3dadeb6debd6380cdab64b97820bbbaa.png">
+</p>
 
 Let's have a look around and see what is on this computer. So far the only thing that really stands out is the folder **windows nt**. Normally the **W** would be capitalized, same with **NT**. Not sure why this was deliberately changed, but we will keep it in mind if anything else comes up.
 
