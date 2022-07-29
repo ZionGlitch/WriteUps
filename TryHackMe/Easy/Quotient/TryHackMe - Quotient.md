@@ -12,7 +12,7 @@ Right away we can tell that this server is an AWS Instance being hosted in **eu-
 
 Let's see what kind of permissions we have as the user "Sage".
 
-![658494285c75fb47f7e816ce2fc218a1.png](WriteUps/TryHackMe/Easy/Quotient/_resources/658494285c75fb47f7e816ce2fc218a1.png)
+![658494285c75fb47f7e816ce2fc218a1.png](../WriteUps/TryHackMe/Easy/Quotient/_resources/658494285c75fb47f7e816ce2fc218a1.png)
 
 It looks like we're not very special and only have general access.
 
