@@ -6,6 +6,7 @@ Created by: ben, JohnHammond, cmnatic, NightWolf, timtaylor
 Pinging the IP address for this machine does not seem to resolve anything. I had to briefly look at another write-up to see if anyone else had issues. It seems RDP still works so I proceeded to simply connect to it and it worked.
 
 ![3cc90c64c1d1ac43d1aef70c73009f4e.png](../_resources/3cc90c64c1d1ac43d1aef70c73009f4e.png)
+https://github.com/ZionGlitch/WriteUps/blob/main/TryHackMe/Easy/Quotient/_resources/0ada677f68c1d969a7520527e7a983c4.png?raw=true
 * * *
 ### Reconnaissance
 Right away we can tell that this server is an AWS Instance being hosted in **eu-west-1b** and is a t2.medium EC2 instance. Not crucially important, but interesting to point out.
