@@ -114,7 +114,9 @@ Got it...
 <p>
   <img height="auto" src="./_resources/f314cea54ab81f3928c495244f3b2faa.png">
 </p>
+
 * * *
+
 ### Post-Exploitation
 
 Time to search for that flag.txt file.
@@ -124,7 +126,9 @@ And it looks like it's right on the Admin Desktop.
 <p>
   <img height="auto" src="./_resources/b9983bdb900bafc38d417afd67737caa.png">
 </p>
+
 * * *
+
 ### Lessons Learned
 
 READ!!!
