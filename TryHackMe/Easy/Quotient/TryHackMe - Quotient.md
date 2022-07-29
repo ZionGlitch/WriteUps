@@ -8,7 +8,7 @@ Pinging the IP address for this machine does not seem to resolve anything. I had
 ![3cc90c64c1d1ac43d1aef70c73009f4e.png](../_resources/3cc90c64c1d1ac43d1aef70c73009f4e.png)
 
 <p>
-  <img height="128" src="./_resources/3cc90c64c1d1ac43d1aef70c73009f4e.png" title="RDP Connect">
+  <src="./_resources/3cc90c64c1d1ac43d1aef70c73009f4e.png" title="RDP Connect">
 </p>
   
 * * *
