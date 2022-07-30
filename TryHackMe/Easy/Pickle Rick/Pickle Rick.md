@@ -35,18 +35,24 @@ Opening the source code of the page shows us the following.
 
 So there is an **icons** directory ont he server as well. Which we do not have access to.
 
-![7a7e481985f91af635b2f8fa68d1a2df.png](../../../_resources/7a7e481985f91af635b2f8fa68d1a2df.png)
+<p>
+  <img height="auto" src="./_resources/7a7e481985f91af635b2f8fa68d1a2df.png">
+</p>
 
 Let's switch gears a little and see if Nmap will find anything.
 
-![899528ced6e00c2444e649f2c01c9d62.png](../../../_resources/899528ced6e00c2444e649f2c01c9d62.png)
+<p>
+  <img height="auto" src="./_resources/899528ced6e00c2444e649f2c01c9d62.png">
+</p>
 
 We have another port open, which is 22 SSH.
 Looking on Exploit-db there aren't that many good exploits we can use here.
 
 Let's run dirbuster instead to see what other hidden directories there might be.
 
-![0d90e22342b0314d50c00d3ed98013c0.png](../../../_resources/0d90e22342b0314d50c00d3ed98013c0.png)
+<p>
+  <img height="auto" src="./_resources/0d90e22342b0314d50c00d3ed98013c0.png">
+</p>
 
 Nice, we have a login page, a robots.txt file, and a server status page.
 
@@ -68,17 +74,23 @@ It seems we have a place to enter commands, and a bunch of other pages that forb
 
 Let's enter the **ls** command to see if anything pops up.
 
-![ad5fb0b88df7c16d1a4fec765c14d5a4.png](../../../_resources/ad5fb0b88df7c16d1a4fec765c14d5a4.png)
+<p>
+  <img height="auto" src="./_resources/ad5fb0b88df7c16d1a4fec765c14d5a4.png">
+</p>
 
 Lets open he file with **cat**
 
 Can't do that...
 
-![ad71d0d5b815346d1eb9e8f747a5290a.png](../../../_resources/ad71d0d5b815346d1eb9e8f747a5290a.png)
+<p>
+  <img height="auto" src="./_resources/ad71d0d5b815346d1eb9e8f747a5290a.png">
+</p>
 
 Maybe we can open it in the browser?
 
-![4facb09041354f018397f946e599622a.png](../../../_resources/4facb09041354f018397f946e599622a.png)
+<p>
+  <img height="auto" src="./_resources/4facb09041354f018397f946e599622a.png">
+</p>
 
 That worked!
 
