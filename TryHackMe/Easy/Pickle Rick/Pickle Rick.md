@@ -13,8 +13,9 @@ Right away we should check the source page for the website. I am using Mozilla f
 
 And good thing we checked, we found a username.
 
-![7a8802ef625982c21975802c76879bf8.png](../../../_resources/7a8802ef625982c21975802c76879bf8.png)
-
+<p><src=./_resources/7a8802ef625982c21975802c76879bf8.png>
+</p>
+  
 Username: R1ckRul3s
 
 We will keep poking around. There is an image on the main page, if we open it in a new tab it may show us a path of existing folders. And sure enough, there is a folder called **assets**
