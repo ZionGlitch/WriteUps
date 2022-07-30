@@ -13,20 +13,25 @@ Right away we should check the source page for the website. I am using Mozilla f
 
 And good thing we checked, we found a username.
 
-<p><src=./_resources/7a8802ef625982c21975802c76879bf8.png>
+<p>
+  <img height="auto" src="./_resources/7a8802ef625982c21975802c76879bf8.png">
 </p>
   
 Username: R1ckRul3s
 
 We will keep poking around. There is an image on the main page, if we open it in a new tab it may show us a path of existing folders. And sure enough, there is a folder called **assets**
 
-![906e06cdad1cb8a6bdaa5d63bb8c0c6d.png](../../../_resources/906e06cdad1cb8a6bdaa5d63bb8c0c6d.png)
+<p>
+  <img height="auto" src="./_resources/906e06cdad1cb8a6bdaa5d63bb8c0c6d.png">
+</p>
 
 There is not much here apart from a few funny gif files and the information for the server. We now know it's an Apache server running on port 80.
 
 Opening the source code of the page shows us the following.
 
-![0dfe6aa1c9ac2b7b56c5e5d594aef081.png](../../../_resources/0dfe6aa1c9ac2b7b56c5e5d594aef081.png)
+<p>
+  <img height="auto" src="./_resources/0dfe6aa1c9ac2b7b56c5e5d594aef081.png">
+</p>
 
 So there is an **icons** directory ont he server as well. Which we do not have access to.
 
