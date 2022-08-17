@@ -1,6 +1,6 @@
 # Introduction
 Road by StillNoob - https://tryhackme.com/room/road
-# Enumeration
+# Reconnaissance, Scanning, & Enumeration
 ## Nmap
 Ran Nmap with the "-p-" flag to find all possible open ports.
 Discovered that Port 22 and Port 80 were open.
