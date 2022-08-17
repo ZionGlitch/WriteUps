@@ -5,7 +5,7 @@ By: tryhackme
 
 * * *
 
-## Reconnaissance
+## Reconnaissance, Scanning, & Enumeration
 
 First step is to visit the website at https://10-10-101-205.p.thmlabs.com/ which shows us that Rick has turned himself into a Pickle, he needs Morty (Us) to log on to his computer but he forgot the password. Let's investigate the webpage and see what we can find.
 
