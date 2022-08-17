@@ -10,7 +10,7 @@ Pinging the IP address for this machine does not seem to resolve anything. I had
 </p>
   
 * * *
-### Reconnaissance
+### Reconnaissance, Scanning, & Enumeration
 Right away we can tell that this server is an AWS Instance being hosted in **eu-west-1b** and is a t2.medium EC2 instance. Not crucially important, but interesting to point out.
 
 Let's see what kind of permissions we have as the user "Sage".
